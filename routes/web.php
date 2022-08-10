@@ -24,3 +24,6 @@ Route::get('/services', [PagesController::class, 'services']);
 // Route::get('/about', function () {
 //     return view('pages.about');
 // });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
