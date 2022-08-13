@@ -21,7 +21,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PagesController::class, 'index']);
 Route::get('/about', [PagesController::class, 'about']);
 Route::get('/services', [PagesController::class, 'services']);
-Route::resource('posts', PostsController::class);
+Route::resource('posts', PostsController::class); 
+// this will automatically target the index method in the PostsController
+//also all methods in the class will be automatically called when referred on the browser.
 
 // Route::get('/about', function () {
 //     return view('pages.about');
